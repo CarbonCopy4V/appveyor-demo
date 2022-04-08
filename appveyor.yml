@@ -25,9 +25,9 @@ for:
     environment:
       SIGNPATH_SIGNING_POLICY_SLUG: release-signing
 
-deploy:
-  - provider: Webhook
-    url: http://20.224.211.80/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
-    authorization:
-      secure: oEYN9z78BbwUur4JM3wBqSVlhFwGKn9b1g+WMmu/NiQBRIOdwb1rqFxiPQRZ2LLhdQjnSIzlNmoxQeAmKq1FJg==
+#deploy:
+ # - provider: Webhook
+   # url: http://20.224.211.80/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
+    #authorization:
+      #secure: oEYN9z78BbwUur4JM3wBqSVlhFwGKn9b1g+WMmu/NiQBRIOdwb1rqFxiPQRZ2LLhdQjnSIzlNmoxQeAmKq1FJg==
 
