@@ -7,7 +7,9 @@ image: Visual Studio 2019
 # Fake build script
 build_script:
   - echo "This step would build the artifact in build-output/unsigned/combined.zip"
-
+cache:
+  - node_modules                    # local npm modules
+  
 # Definition of artifacts
 artifacts:
   - path: build-output\unsigned\combined.zip
