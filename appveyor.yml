@@ -9,7 +9,10 @@ build_script:
   - echo "This step would build the artifact in build-output/unsigned/combined.zip"
 cache:
   - node_modules                    # local npm modules
-  
+
+build_cloud: 'SIGN-4793'
+image: Windows
+
 # Definition of artifacts
 artifacts:
   - path: build-output\unsigned\combined.zip
