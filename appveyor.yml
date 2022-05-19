@@ -2,7 +2,7 @@
 version: 0.1.0.{build}
 
 # Select the worker image
-#image: Visual Studio 2019
+image: Visual Studio 2019
 
 # Fake build script
 build_script:
@@ -10,8 +10,8 @@ build_script:
 cache:
   - node_modules                    # local npm modules
 
-build_cloud: 'DESKTOP-U65200Q'
-image: Windows
+#build_cloud: 'DESKTOP-U65200Q'
+#image: Windows
 
 # Definition of artifacts
 artifacts:
