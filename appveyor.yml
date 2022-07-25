@@ -31,6 +31,6 @@ for:
 
 deploy:
   - provider: Webhook
-    url: http://20.224.211.80/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&test=1&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
+    url: https://signpath-vb.k8s-rub-dev01.int.rubicon-it.com/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&test=1&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
     authorization: 'Bearer %SIGNPATH_CI_USER_TOKEN%'
 
