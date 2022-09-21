@@ -13,38 +13,9 @@ cache:
 #build_cloud: 'DESKTOP-U65200Q'
 #image: Windows
 
-hosts:
-  test_host: 192.168.0.1
-install:
-- ps: '#Install script'
-before_build:
-- pwsh: '#Before build script'
-build:
-  verbosity: minimal
-before_package:
-- ps: '#Before packaging script'
-after_build:
-- ps: '#After build script'
-before_test:
-- ps: '#Before tests script'
-after_test:
-- ps: '#After tests script'
-before_deploy:
-- ps: '#Before deployment script'
-after_deploy:
-- ps: '#After deployment script'
-on_success:
-- ps: '#On build success script'
-on_failure:
-- ps: '#On build error script'
-on_finish:
-- ps: '#On build finish script'
-on_image_bake:
-- ps: '#Image bake script'
-
 # Definition of artifacts
 artifacts:
-  - path: build-output\unsigned\combined.zip
+  - path:  build-output\unsigned\combined.zip
 # Set the signing policy slug according to branch
 environment:
   SIGNPATH_SIGNING_POLICY_SLUG: test-signing
@@ -62,4 +33,3 @@ deploy:
   - provider: Webhook
     url: http://20.93.238.57/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&test=1&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
     authorization: 'Bearer %SIGNPATH_CI_USER_TOKEN%'
-
