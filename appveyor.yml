@@ -17,7 +17,6 @@ hosts:
   test_host: 192.168.0.1
 install:
 - ps: '#Install script'
-cache: cache-entry
 before_build:
 - pwsh: '#Before build script'
 build:
