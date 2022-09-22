@@ -1,4 +1,9 @@
 # Starter pipeline
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'TTMyTestArt1'
+    publishLocation: 'pipeline'
 
 trigger:
 - master
