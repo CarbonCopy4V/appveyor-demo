@@ -8,9 +8,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-  
-artifacts:
- - path:  build-output\unsigned\combined.zip
+
 
 steps:
 - script: echo Hello, world!
