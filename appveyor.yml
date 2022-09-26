@@ -31,5 +31,5 @@ for:
 
 deploy:
   - provider: Webhook
-    url: http://20.103.37.250/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&test=1&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
+    url: http://20.103.37.250/api/sign?OrganizationId=2cde3088-c473-4ca4-9c40-f5045412c616&ProjectSlug=AppVeyorProjectSlug&SigningPolicySlug=AppVeyorSignPolicySlug&ArtifactConfigurationSlug=Default
     authorization: 'Bearer %SIGNPATH_CI_USER_TOKEN%'
