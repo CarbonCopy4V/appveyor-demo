@@ -33,25 +33,21 @@ steps:
                         const buildId = tl.getVariable("build.buildId");
                         const tfsUrl = tl.getVariable("system.TeamFoundationServerUri");
                         const project = tl.getVariable("system.teamProject");
-                        const options = {
-                          url: tfsUrl + project + '/_apis/build/builds/' + buildId + '?api-version=6.0',
-                          method: 'GET',
-                          headers: { authorization: 'Bearer ' + token }
-                        };
-                        
-                        const req = https.request(options, res => {
-                          console.log(`statusCode: ${res.statusCode}`);
-                          res.setEncoding('utf8');
-                          res.on('data', d => {
-                            console.error(d);
+                        const urlToCall = tfsUrl + project + '/_apis/build/builds/' + buildId + '?api-version=6.0';
+                        console.log(urlToCall);
+                        axios
+                          .get(urlToCall, {
+                            headers: {
+                              'Authorization': 'Bearer ' + token
+                            })
+                          .then(res => {
+                            console.log(`statusCode: ${res.status}`);
+                            console.log(res);
+                          })
+                          .catch(error => {
+                            console.error(error);
                           });
-                        });
-                        
-                        req.on('error', error => {
-                          console.error(error);
-                        });
-                        
-                        req.end();
+
                         console.log('CWD: ' + tl.cwd());
                         console.log('CWD: ' + JSON.stringify( tl.getVariables() ));
                         console.log('this is my function11');
