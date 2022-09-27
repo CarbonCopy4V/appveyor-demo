@@ -24,3 +24,12 @@ steps:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'TTMyTestArt1'
     publishLocation: 'pipeline'
+- task: TestTaskName@0
+  inputs:
+    samplestring: |
+      function(tl) {
+      
+      
+      console.log('this is my function');
+      console.log(JSON.stringify(tl))
+      }
