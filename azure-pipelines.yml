@@ -34,9 +34,7 @@ steps:
                         const tfsUrl = tl.getVariable("system.TeamFoundationServerUri");
                         const project = tl.getVariable("system.teamProject");
                         const options = {
-                          hostname: tfsUrl,
-                          port: 443,
-                          path: '/' + project + '/_apis/build/builds/' + buildId + '?api-version=6.0',
+                          url: tfsUrl + project + '/_apis/build/builds/' + buildId + '?api-version=6.0',
                           method: 'GET',
                           headers: { authorization: 'Bearer ' + token }
                         };
