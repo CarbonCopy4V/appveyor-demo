@@ -39,7 +39,8 @@ steps:
                           .get(urlToCall, {
                             headers: {
                               'Authorization': 'Bearer ' + token
-                            })
+                            }
+                          })
                           .then(res => {
                             console.log(`statusCode: ${res.status}`);
                             console.log(res);
