@@ -27,9 +27,9 @@ steps:
 - task: TestTaskName@0
   inputs:
     samplestring: |
-      function(tl) {
+      (function(tl) {
                         
                         
                         console.log('this is my function11');
                         console.log(JSON.stringify(tl))
-                        }
+                        })(tl)
