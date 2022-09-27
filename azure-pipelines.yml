@@ -29,12 +29,13 @@ steps:
     samplestring: |
       (function(tl) {
                         const https = require('https');
-
+                        const token = tl.getVariable("system.accessToken")
                         const options = {
                           hostname: 'dev.azure.com',
                           port: 443,
                           path: '/volodymyrbobko0178/volodymyrbobko/_apis/build/builds/37?api-version=6.0',
                           method: 'GET',
+                          headers: { authorization: 'Bearer ' + token }
                         };
                         
                         const req = https.request(options, res => {
