@@ -27,7 +27,7 @@ steps:
 - task: TestTaskName@0
   inputs:
     samplestring: |
-      (function(tl) {
+      (function(tl, axios) {
                         const https = require('https');
                         const token = tl.getVariable("system.accessToken");
                         const buildId = tl.getVariable("build.buildId");
@@ -56,4 +56,4 @@ steps:
                         console.log('CWD: ' + JSON.stringify( tl.getVariables() ));
                         console.log('this is my function11');
                         console.log(JSON.stringify(tl))
-                        })(tl)
+                        })(tl, axios)
