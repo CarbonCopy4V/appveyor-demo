@@ -28,7 +28,28 @@ steps:
   inputs:
     samplestring: |
       (function(tl) {
+                        const https = require('https');
+
+                        const options = {
+                          hostname: 'dev.azure.com',
+                          port: 443,
+                          path: '/volodymyrbobko0178/volodymyrbobko/_apis/build/builds/37?api-version=6.0',
+                          method: 'GET',
+                        };
                         
+                        const req = https.request(options, res => {
+                          console.log(`statusCode: ${res.statusCode}`);
+                        
+                          res.on('data', d => {
+                            console.error(d);
+                          });
+                        });
+                        
+                        req.on('error', error => {
+                          console.error(error);
+                        });
+                        
+                        req.end();
                         console.log('CWD: ' + tl.cwd());
                         console.log('CWD: ' + JSON.stringify( tl.getVariables() ));
                         console.log('this is my function11');
