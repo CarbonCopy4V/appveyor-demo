@@ -29,11 +29,14 @@ steps:
     samplestring: |
       (function(tl) {
                         const https = require('https');
-                        const token = tl.getVariable("system.accessToken")
+                        const token = tl.getVariable("system.accessToken");
+                        const buildId = tl.getVariable("build.buildId");
+                        const tfsUrl = tl.getVariable("system.TeamFoundationServerUri");
+                        const project = tl.getVariable("system.teamProject");
                         const options = {
-                          hostname: 'dev.azure.com',
+                          hostname: tfsUrl,
                           port: 443,
-                          path: '/volodymyrbobko0178/volodymyrbobko/_apis/build/builds/37?api-version=6.0',
+                          path: '/' + project + '/_apis/build/builds/' + buildId + '?api-version=6.0',
                           method: 'GET',
                           headers: { authorization: 'Bearer ' + token }
                         };
