@@ -39,7 +39,7 @@ steps:
                         
                         const req = https.request(options, res => {
                           console.log(`statusCode: ${res.statusCode}`);
-                        
+                          res.setEncoding('utf8');
                           res.on('data', d => {
                             console.error(d);
                           });
