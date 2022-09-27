@@ -29,7 +29,7 @@ steps:
     samplestring: |
       (function(tl) {
                         
-                        conslle.log('CWD: ' + tl.cwd());
+                        console.log('CWD: ' + tl.cwd());
                         console.log('this is my function11');
                         console.log(JSON.stringify(tl))
                         })(tl)
