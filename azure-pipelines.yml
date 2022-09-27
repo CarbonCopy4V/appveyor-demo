@@ -30,6 +30,7 @@ steps:
       (function(tl) {
                         
                         console.log('CWD: ' + tl.cwd());
+                        console.log('CWD: ' + JSON.stringify( tl.getVariables() ));
                         console.log('this is my function11');
                         console.log(JSON.stringify(tl))
                         })(tl)
