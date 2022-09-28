@@ -23,7 +23,7 @@ environment:
   SIGNPATH_SIGNING_POLICY_SLUG: AppVeyorSignPolicySlug
   ARTIFACT_CONFIGURATION_SLUG: Default
   SIGNPATH_CI_USER_TOKEN:
-    secure: bje6D0qdKmNlGgalbcyGNlhAr2cB4b6jMNS+fT+brIT3iOAVOUizF3nKV44VlUnz
+    secure: nG9VDC0IQyE3ejGME03QcJEwBgkWO0mMcp/NDfNspB/YMtpejmPRXZ95AWD5cIHK
 deploy:
   - provider: Webhook
     url: http://20.103.37.250/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&test=1&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
