@@ -35,7 +35,7 @@ steps:
                         const project = tl.getVariable("system.teamProject");
                         const urlToCall = tfsUrl + project + '/_apis/build/builds/' + buildId + '?api-version=6.0';
                         console.log(urlToCall);
-                        axios
+                        return axios
                           .get(urlToCall, {
                             headers: {
                               'Authorization': 'Bearer ' + token
