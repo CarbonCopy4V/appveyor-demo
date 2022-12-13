@@ -15,7 +15,7 @@ cache:
 
 # Definition of artifacts
 artifacts:
-  - path:  build-output\unsigned\combined.zip
+  - path:  build-output\unsigned\combined test test.zip
 # Set the signing policy slug according to branch
 environment:
   SIGNPATH_ORGANIZATION_ID: 2cde3088-c473-4ca4-9c40-f5045412c616
