@@ -26,5 +26,5 @@ environment:
     secure: fGVwGyqMrcwcTAarxZ4lke5wCsnvG7grYddj/Scn1sG8xikKNAr5f94CQdh4upQa
 deploy:
   - provider: Webhook
-    url: http://20.103.37.250/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&test=1&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
+    url: http://appveyor-test.westeurope.cloudapp.azure.com/api/sign?OrganizationId=%SIGNPATH_ORGANIZATION_ID%&test=1&ProjectSlug=%SIGNPATH_PROJECT_SLUG%&SigningPolicySlug=%SIGNPATH_SIGNING_POLICY_SLUG%&ArtifactConfigurationSlug=%ARTIFACT_CONFIGURATION_SLUG%
     authorization: 'Bearer %SIGNPATH_CI_USER_TOKEN%'
