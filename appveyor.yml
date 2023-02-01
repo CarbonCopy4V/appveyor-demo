@@ -19,8 +19,8 @@ artifacts:
 # Set the signing policy slug according to branch
 environment:
   SIGNPATH_ORGANIZATION_ID: 2cde3088-c473-4ca4-9c40-f5045412c616
-  SIGNPATH_PROJECT_SLUG: AppVeyorProjectSlug
-  SIGNPATH_SIGNING_POLICY_SLUG: AppVeyorSignPolicySlug
+  SIGNPATH_PROJECT_SLUG: AppVeyorTestProjectRobert
+  SIGNPATH_SIGNING_POLICY_SLUG: AppVeyorTestProjectSigningPolicyRobert
   ARTIFACT_CONFIGURATION_SLUG: Default
   SIGNPATH_CI_USER_TOKEN:
     secure: upV2zFb3r2epww7+nBl8Ua2TY3T2NBeWQPtXKguPKfyVvE7xFOlSVKXBSCEUO2RX
